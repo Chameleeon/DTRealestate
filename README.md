@@ -16,13 +16,14 @@ General functionalities represent functionalities which are not specific to any 
 ### Registration
 
 Agents can create a new account. This account must be activated by an administrator before the agent can use the application. The registraction screen is shown on the image below.
-![signup](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/signup.png)
+![signup](https://github.com/user-attachments/assets/7cb3e510-4a34-46c0-a38c-e28da8567384)
+
 
 ### Log in
 
 After the agent account has been activated, the agent can loog in. The log in screen is a standard, simple log in screen taking in a username and a password, checking the password hash to the one stored in the database and if they match, the agent is logged in and can perform various actions.
 
-![login](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/login.png)
+![image](https://github.com/user-attachments/assets/73293419-96d5-42ae-a8d6-581e4505f164)
 
 ### Settings
 
