@@ -1,0 +1,137 @@
+﻿<UserControl x:Class="Nekretnine.Views.OfferCardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="450">
+    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5" Background="{DynamicResource CardBackgroundBrush}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="Edit" Width="30" Height="30" Background="Transparent" BorderThickness="0"
+                    HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5"
+                    ToolTip="Click to edit" Grid.Row="0" Grid.Column="1" cal:Message.Attach="[Event Click] = [Action Edit()]">
+                <Viewbox Width="24" Height="24">
+                    <Canvas Width="24" Height="24">
+                        <Path StrokeThickness="1.5" Stroke="{DynamicResource IconBrush}" StrokeLineJoin="Round"
+                              StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                            <Path.Data>
+                                <PathGeometry Figures="M21.2799 6.40005L11.7399 15.94C10.7899 16.89 7.96987 17.33 7.33987 16.7C6.70987 16.07 7.13987 13.25 8.08987 12.3L17.6399 2.75002C17.8754 2.49308 18.1605 2.28654 18.4781 2.14284C18.7956 1.99914 19.139 1.92124 19.4875 1.9139C19.8359 1.90657 20.1823 1.96991 20.5056 2.10012C20.8289 2.23033 21.1225 2.42473 21.3686 2.67153C21.6147 2.91833 21.8083 3.21243 21.9376 3.53609C22.0669 3.85976 22.1294 4.20626 22.1211 4.55471C22.1128 4.90316 22.0339 5.24635 21.8894 5.5635C21.7448 5.88065 21.5375 6.16524 21.2799 6.40005V6.40005Z" FillRule="NonZero"/>
+                            </Path.Data>
+                        </Path>
+                        <Path StrokeThickness="1.5" Stroke="{DynamicResource IconBrush}" StrokeLineJoin="Round"
+                              StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                            <Path.Data>
+                                <PathGeometry Figures="M11 4H6C4.93913 4 3.92178 4.42142 3.17163 5.17157C2.42149 5.92172 2 6.93913 2 8V18C2 19.0609 2.42149 20.0783 3.17163 20.8284C3.92178 21.5786 4.93913 22 6 22H17C19.21 22 20 20.2 20 18V13" FillRule="NonZero"/>
+                            </Path.Data>
+                        </Path>
+                    </Canvas>
+                </Viewbox>
+            </Button>
+
+            <!-- Title (TextBlock) -->
+            <TextBlock x:Name="Title" FontSize="14" FontWeight="Bold" TextWrapping="Wrap" 
+                       Text="{Binding Title}" Grid.Row="0" Foreground="{DynamicResource TextPrimaryBrush}" Grid.Column="0" Margin="0,0,5,0" VerticalAlignment="Center"/>
+
+
+            <Grid Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="0,5">
+                <Image x:Name="OfferImage" Stretch="UniformToFill" Source="{Binding ImageSource}"/>
+
+                <!-- Left Arrow Button -->
+                <Button x:Name="PreviousImage" Width="40" Height="40" 
+                    VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"
+                    Background="#80000000" Opacity="0.7" BorderThickness="0" cal:Message.Attach="PreviousImage()"
+                    ToolTip="Previous image">
+                            <Viewbox Width="24" Height="24">
+                                <Canvas Width="24" Height="24">
+                                    <Path Fill="{DynamicResource IconBrush}" Data="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"/>
+                                </Canvas>
+                            </Viewbox>
+                </Button>
+
+                <!-- Right Arrow Button -->
+                <Button x:Name="NextImage" Width="40" Height="40" 
+                    VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0"
+                    Background="#80000000" Opacity="0.7" BorderThickness="0" cal:Message.Attach="NextImage()"
+                    ToolTip="Next image">
+                            <Viewbox Width="24" Height="24">
+                                <Canvas Width="24" Height="24">
+                                    <Path Fill="{DynamicResource IconBrush}" Data="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                                </Canvas>
+                            </Viewbox>
+                        </Button>
+            </Grid>
+
+            <!-- Short Description and Price Section -->
+            <StackPanel Grid.Row="3" Orientation="Vertical" Margin="0,5">
+                <!-- Price -->
+                <TextBlock x:Name="Price" FontSize="12" FontWeight="SemiBold" Foreground="Green"
+                           Text="{Binding Price}"/>
+
+                <!-- Short Description -->
+                <TextBlock x:Name="ShortDescription" FontSize="14" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"
+                           Text="{Binding ShortDescription}" Foreground="{DynamicResource TextPrimaryBrush}"/>
+            </StackPanel>
+
+            <!-- Bottom Right Buttons: Details + Add Contract -->
+            <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,0,0">
+                <!-- Add Offer Button -->
+                <Button x:Name="AddContract" cal:Message.Attach="AddContract()" Style="{DynamicResource CustomButtonStyle}" Height="35" Width="50">
+                    <Viewbox Stretch="Uniform">
+                        <Canvas Width="32" Height="32">
+                            <Canvas.RenderTransform>
+                                <TranslateTransform X="0" Y="0"/>
+                            </Canvas.RenderTransform>
+                            <Canvas Name="Page1">
+                                <Canvas Name="IconSet">
+                                    <Canvas.RenderTransform>
+                                        <TranslateTransform X="-100.000000" Y="-1035.000000"/>
+                                    </Canvas.RenderTransform>
+                                    <Path Fill="{DynamicResource IconBrush}" StrokeThickness="1">
+                                        <Path.Data>
+                                            <PathGeometry Figures="M130 1063 C130 1064.1 129.104 1065 128 1065 L104 1065 C102.896 1065 102 1064.1 102 1063 L102 1039 C102 1037.9 102.896 1037 104 1037 L128 1037 C129.104 1037 130 1037.9 130 1039 L130 1063 L130 1063 Z M128 1035 L104 1035 C101.791 1035 100 1036.79 100 1039 L100 1063 C100 1065.21 101.791 1067 104 1067 L128 1067 C130.209 1067 132 1065.21 132 1063 L132 1039 C132 1036.79 130.209 1035 128 1035 Z M122 1050 L117 1050 L117 1045 C117 1044.45 116.552 1044 116 1044 C115.448 1044 115 1044.45 115 1045 L115 1050 L110 1050 C109.448 1050 109 1050.45 109 1051 C109 1051.55 109.448 1052 110 1052 L115 1052 L115 1057 C115 1057.55 115.448 1058 116 1058 C116.552 1058 117 1057.55 117 1057 L117 1052 L122 1052 C122.552 1052 123 1051.55 123 1051 C123 1050.45 122.552 1050 122 1050 L122 1050 Z" FillRule="EvenOdd"/>
+                                        </Path.Data>
+                                    </Path>
+                                </Canvas>
+                            </Canvas>
+                        </Canvas>
+                    </Viewbox>
+                </Button>
+                <!-- Details Button -->
+                <Button x:Name="ShowDetails" Style="{DynamicResource CustomButtonStyle}" Height="35" Width="50" cal:Message.Attach="ShowDetails()">
+                    <Viewbox Stretch="Uniform">
+                        <Canvas Width="24" Height="24">
+                            <Path StrokeThickness="1.5" Stroke="{DynamicResource IconBrush}" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                                <Path.Data>
+                                    <PathGeometry Figures="M12 17V11" FillRule="NonZero"/>
+                                </Path.Data>
+                            </Path>
+                            <Ellipse Canvas.Left="0" Canvas.Top="0" Width="2" Height="2" Fill="{DynamicResource IconBrush}">
+                                <Ellipse.RenderTransform>
+                                    <MatrixTransform Matrix="1 0 0 -1 11 9"/>
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                            <Path StrokeThickness="1.5" Stroke="{DynamicResource IconBrush}" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                                <Path.Data>
+                                    <PathGeometry Figures="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" FillRule="NonZero"/>
+                                </Path.Data>
+                            </Path>
+                        </Canvas>
+                    </Viewbox>
+                </Button>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</UserControl>

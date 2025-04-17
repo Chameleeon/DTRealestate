@@ -1,0 +1,99 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Background Colors -->
+    <Color x:Key="Background">#2F2B33</Color>
+    <Color x:Key="SidebarBackground">#5F4A75</Color>
+    <Color x:Key="BackgroundLogin">#2F2B33</Color>
+    <Color x:Key="SidebarBackgroundLogin">#5F4A75</Color>
+    <Color x:Key="CardBacground">#504957</Color>
+    <Color x:Key="SecondaryCardBackground">#A38CCC</Color>
+    <Color x:Key="SecondaryCardHeaderBackground">#A15CCC</Color>
+    <Color x:Key="SecondaryGridBackground">#3B3442</Color>
+
+    <!-- Text Colors -->
+    <Color x:Key="TextColorPrimary">#fefefe</Color>
+    <Color x:Key="TextColorSecondary">#090909</Color>
+
+
+    <!-- Icon Colors -->
+    <Color x:Key="IconPrimary">#dadada</Color>
+    
+    <!-- Button Colors -->
+    <Color x:Key="ButtonHover">#565A84</Color>
+    <Color x:Key="ButtonText">#dadada</Color>
+    <Color x:Key="ButtonPressed">#212233</Color>
+    <Color x:Key="LoginButtonBg">#813CCA</Color>
+    <Color x:Key="LoginButtonHover">#a14fCf</Color>
+    <Color x:Key="HoverSecondary">#813CCA</Color>
+    <Color x:Key="SelectedColor">#a14fcf</Color>
+    <Color x:Key="DarkerButtonDisabled">#9B8CB5</Color>
+    <Color x:Key="ButtonSelected">#812db4</Color>
+
+    <!-- Input Box Colors -->
+    <Color x:Key="InputBackground">#433C4B</Color>
+    
+    <!-- Shadow Effect Colors -->
+    <Color x:Key="DropShadowSecondary">#240540</Color>
+    
+    <!-- Highlights Colors -->
+    <Color x:Key="HighlightPrimary">#624278</Color>
+    <Color x:Key="HighlightTextPrimary">#D6E8D6</Color>
+
+
+
+
+
+
+    <!-- Background Brushes -->
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource Background}"/>
+    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="{StaticResource SidebarBackground}"/>
+    <SolidColorBrush x:Key="BackgroundBrushLogin" Color="{StaticResource BackgroundLogin}"/>
+    <SolidColorBrush x:Key="SidebarBackgroundBrushLogin" Color="{StaticResource SidebarBackgroundLogin}"/>
+    <SolidColorBrush x:Key="CardBackgroundBrush" Color="{StaticResource CardBacground}"/>
+    <SolidColorBrush x:Key="SecondaryCardBackgroundBrush" Color="{StaticResource SecondaryCardBackground}"/>
+    <SolidColorBrush x:Key="SecondaryCardHeaderBackgroundBrush" Color="{StaticResource SecondaryCardHeaderBackground}"/>
+    
+
+    <!-- Icon Brushes -->
+    <SolidColorBrush x:Key="IconBrush" Color="{StaticResource IconPrimary}"/>
+    
+    <!-- Button Brushes -->
+    <SolidColorBrush x:Key="ButtonTextBrush" Color="{StaticResource ButtonText}"/>
+    <SolidColorBrush x:Key="ButtonHoverBrush" Color="{StaticResource ButtonHover}"/>
+    <SolidColorBrush x:Key="ButtonPressedBrush" Color="{StaticResource ButtonPressed}"/>
+    <SolidColorBrush x:Key="LoginButtonBgBrush" Color="{StaticResource LoginButtonBg}"/>
+    <SolidColorBrush x:Key="LoginButtonHoverBrush" Color="{StaticResource LoginButtonHover}"/>
+    <SolidColorBrush x:Key="HoverSecondaryBrush" Color="{StaticResource HoverSecondary}"/>
+    <SolidColorBrush x:Key="SelectedColorBrush" Color="{StaticResource SelectedColor}"/>
+    <SolidColorBrush x:Key="DarkerButtonDisabledBrush" Color="{StaticResource DarkerButtonDisabled}"/>
+    <SolidColorBrush x:Key="ButtonSelectedBrush" Color="{DynamicResource ButtonSelected}"/>
+
+    <!-- Input Bacground -->
+    <SolidColorBrush x:Key="InputBackgroundBrush" Color="{StaticResource InputBackground}"/>
+
+    <!-- Text Brushes -->
+    <SolidColorBrush x:Key="TextPrimaryBrush" Color="{StaticResource TextColorPrimary}"/>
+    <SolidColorBrush x:Key="TextSecondaryBrush" Color="{StaticResource TextColorSecondary}"/>
+    
+    <!-- Shadow Effect Brushes -->
+    <SolidColorBrush x:Key="DropShadowSecondaryBrush" Color="{StaticResource DropShadowSecondary}"/>
+
+    <!-- Highlights Brushes -->
+    <SolidColorBrush x:Key="HighlightPrimaryBrush" Color="{DynamicResource HighlightPrimary}"/>
+    <SolidColorBrush x:Key="HighlightTextPrimaryBrush" Color="{DynamicResource HighlightTextPrimary}"/>
+
+    <!-- DataGrid Styling Brushes (Dark Theme) -->
+    <SolidColorBrush x:Key="GridBackgroundBrush" Color="{StaticResource CardBacground}"/>
+    <SolidColorBrush x:Key="GridRowAltBrush" Color="{DynamicResource SecondaryGridBackground}"/>
+    <!-- Slightly lighter than CardBacground -->
+    <SolidColorBrush x:Key="GridBorderBrush" Color="{StaticResource HighlightPrimary}"/>
+    <SolidColorBrush x:Key="GridHeaderBackgroundBrush" Color="{StaticResource SidebarBackground}"/>
+    <SolidColorBrush x:Key="GridHeaderForegroundBrush" Color="{StaticResource TextColorPrimary}"/>
+    <SolidColorBrush x:Key="PrimaryButtonBackground" Color="{StaticResource LoginButtonBg}"/>
+    <SolidColorBrush x:Key="PrimaryButtonForeground" Color="{StaticResource ButtonText}"/>
+    
+
+
+
+</ResourceDictionary>

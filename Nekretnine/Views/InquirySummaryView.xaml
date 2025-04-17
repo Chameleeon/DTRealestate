@@ -1,0 +1,133 @@
+﻿<UserControl x:Class="Nekretnine.Views.InquirySummaryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignHeight="100" d:DesignWidth="600">
+    <Border Background="{StaticResource CardBackgroundBrush}" BorderBrush="{StaticResource ComboBoxDisabledBorderBrush}" BorderThickness="1" CornerRadius="8" Padding="10" Margin="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- Inquiry Title -->
+            <TextBlock Grid.Row="0" Grid.Column="0"
+                       Text="{Binding Title}"
+                       FontWeight="Bold"
+                       FontSize="14"
+                       Foreground="{DynamicResource TextPrimaryBrush}"
+                       TextTrimming="CharacterEllipsis" />
+            
+            <!-- Details Button -->
+            <Button x:Name="ShowInfo" 
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Top"
+                    Margin="5,0,2,0" 
+                    Style="{DynamicResource CustomButtonStyle}" 
+                    Height="25" 
+                    Width="25"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    ToolTip="Show Details">
+                <Viewbox Stretch="Uniform">
+                    <Canvas Width="24" Height="24">
+                        <Path StrokeThickness="1.5" Stroke="{DynamicResource IconBrush}" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                            <Path.Data>
+                                <PathGeometry Figures="M12 17V11" FillRule="NonZero"/>
+                            </Path.Data>
+                        </Path>
+                        <Ellipse Canvas.Left="0" Canvas.Top="0" Width="2" Height="2" Fill="{DynamicResource IconBrush}">
+                            <Ellipse.RenderTransform>
+                                <MatrixTransform Matrix="1 0 0 -1 11 9"/>
+                            </Ellipse.RenderTransform>
+                        </Ellipse>
+                        <Path StrokeThickness="1.5" Stroke="{DynamicResource IconBrush}" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                            <Path.Data>
+                                <PathGeometry Figures="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" FillRule="NonZero"/>
+                            </Path.Data>
+                        </Path>
+                    </Canvas>
+                </Viewbox>
+            </Button>
+
+            <!-- Inquiry Summary -->
+            <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                       Text="{Binding Summary}"
+                       FontSize="12"
+                       Foreground="{DynamicResource TextPrimaryBrush}"
+                       Margin="0,4,0,0"
+                       TextTrimming="CharacterEllipsis"
+                       MaxHeight="40" />
+            
+            <!-- Action Buttons -->
+            <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Right" 
+                        Margin="0,8,0,0">
+                
+                <!-- Reply Button -->
+                <Button x:Name="Reply"
+                        ToolTip="Reply" 
+                        Margin="0,0,8,0"
+                        Width="30" 
+                        Height="30"
+                        Background="Transparent"
+                         Style="{DynamicResource CustomButtonStyle}"
+                        BorderThickness="0">
+                    <Canvas Width="24" Height="24">
+                        <Path Fill="{DynamicResource IconBrush}">
+                            <Path.Data>
+                                <PathGeometry Figures="M6.4 3.80353C7.55322 2.26658 10 3.08182 10 5.00302V8.00928C14.6772 7.86093 17.7771 9.50672 19.7796 11.7657C21.8614 14.1142 22.6633 17.0184 22.9781 18.9028C23.116 19.7283 22.5806 20.3237 22.0149 20.5275C21.4711 20.7234 20.7467 20.6283 20.2749 20.0531C18.6945 18.1261 15.5 15.4884 10 15.4884V18.997C10 20.9182 7.55321 21.7334 6.4 20.1965L1.6 13.7992C0.800001 12.733 0.800001 11.267 1.6 10.2008L6.4 3.80353ZM8 5.00302L3.2 11.4003C2.93333 11.7557 2.93333 12.2443 3.2 12.5997L8 18.997V14.5C8 13.9477 8.44772 13.5 9 13.5H10C17 13.5 20.6009 17.4621 20.6009 17.4621C20.1828 16.0361 19.4749 14.4371 18.2829 13.0924C16.7183 11.3273 14.5 10 10 10H9C8.44772 10 8 9.55228 8 9V5.00302Z" FillRule="EvenOdd"/>
+                            </Path.Data>
+                        </Path>
+                    </Canvas>
+                </Button>
+                
+                <!-- Delete Button -->
+                <Button x:Name="Delete"
+                        ToolTip="Delete" 
+                        Width="30" 
+                        Height="30"
+                        Background="Transparent"
+                         Style="{DynamicResource CustomButtonStyle}"
+                        BorderThickness="0">
+                    <Canvas Width="24" Height="24">
+                        <Path StrokeThickness="1.5" Stroke="{DynamicResource IconBrush}" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                            <Path.Data>
+                                <PathGeometry Figures="M9.17065 4C9.58249 2.83481 10.6937 2 11.9999 2C13.3062 2 14.4174 2.83481 14.8292 4" FillRule="NonZero"/>
+                            </Path.Data>
+                        </Path>
+                        <Path StrokeThickness="1.5" Stroke="{DynamicResource IconBrush}" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                            <Path.Data>
+                                <PathGeometry Figures="M20.5 6H3.49988" FillRule="NonZero"/>
+                            </Path.Data>
+                        </Path>
+                        <Path StrokeThickness="1.5" Stroke="{DynamicResource IconBrush}" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                            <Path.Data>
+                                <PathGeometry Figures="M18.3735 15.3991C18.1965 18.054 18.108 19.3815 17.243 20.1907C16.378 21 15.0476 21 12.3868 21H11.6134C8.9526 21 7.6222 21 6.75719 20.1907C5.89218 19.3815 5.80368 18.054 5.62669 15.3991L5.16675 8.5M18.8334 8.5L18.6334 11.5" FillRule="NonZero"/>
+                            </Path.Data>
+                        </Path>
+                        <Path StrokeThickness="1.5" Stroke="{DynamicResource IconBrush}" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                            <Path.Data>
+                                <PathGeometry Figures="M9.5 11L10 16" FillRule="NonZero"/>
+                            </Path.Data>
+                        </Path>
+                        <Path StrokeThickness="1.5" Stroke="{DynamicResource IconBrush}" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                            <Path.Data>
+                                <PathGeometry Figures="M14.5 11L14 16" FillRule="NonZero"/>
+                            </Path.Data>
+                        </Path>
+                    </Canvas>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

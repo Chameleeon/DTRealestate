@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Nekretnine.Views.OfferDetailsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:localize="clr-namespace:Nekretnine.Localization"
+             mc:Ignorable="d"
+             d:Height="340" d:Width="400">
+
+    <UserControl.Resources>
+        <ObjectDataProvider x:Key="Loc"
+            ObjectType="{x:Type localize:Localizer}"
+            MethodName="get_Instance" />
+    </UserControl.Resources>
+
+    <Viewbox Stretch="Uniform">
+        <Grid Width="400" Height="340">
+            <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Padding="20" Background="{DynamicResource BackgroundBrush}">
+                <StackPanel>
+                    <TextBlock Text="{Binding [details_offer], Source={StaticResource Loc}}" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="{DynamicResource TextPrimaryBrush}"/>
+
+                    <!-- Title -->
+                    <TextBlock Text="{Binding [title], Source={StaticResource Loc}}" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="5,0"/>
+                    <TextBlock Text="{Binding Title}" Width="300" Margin="0,5" TextWrapping="Wrap" Foreground="{DynamicResource TextPrimaryBrush}" />
+
+                    <!-- Short Description -->
+                    <TextBlock Text="{Binding [short_desc], Source={StaticResource Loc}}" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="5,10,0,0"/>
+                    <TextBlock Text="{Binding ShortDescription}" Width="300" Margin="0,5" TextWrapping="Wrap" Foreground="{DynamicResource TextPrimaryBrush}" />
+
+                    <!-- Price -->
+                    <TextBlock Text="{Binding [price], Source={StaticResource Loc}}" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="5,10,0,0"/>
+                    <TextBlock Text="{Binding Price}" Width="300" Margin="0,5" Foreground="{DynamicResource TextPrimaryBrush}" />
+
+                    <!-- Offer Type -->
+                    <TextBlock Text="{Binding [offer_type], Source={StaticResource Loc}}" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="5,10,0,0"/>
+                    <TextBlock Text="{Binding SelectedOfferType}" Width="300" Margin="0,5" Foreground="{DynamicResource TextPrimaryBrush}" />
+
+                    <!-- Close Button -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                        <Button x:Name="Close" Content="{Binding [close], Source={StaticResource Loc}}" Width="80" Height="30" Command="{Binding CancelCommand}" Style="{DynamicResource DarkerButtonStyle}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Viewbox>
+</UserControl>

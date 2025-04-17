@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="Nekretnine.Views.ContractAddView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:localize="clr-namespace:Nekretnine.Localization"
+             xmlns:converters="clr-namespace:Nekretnine.Converters"
+             mc:Ignorable="d"
+             d:Height="420" d:Width="400">
+
+    <UserControl.Resources>
+        <converters:StringIsNullOrEmptyConverter x:Key="StringIsNullOrEmptyConverter"/>
+        <ObjectDataProvider x:Key="Loc"
+                            ObjectType="{x:Type localize:Localizer}"
+                            MethodName="get_Instance"/>
+    </UserControl.Resources>
+
+    <Viewbox Stretch="Uniform">
+        <Grid Width="400" Height="420">
+            <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Padding="20" Background="{DynamicResource BackgroundBrush}">
+                <StackPanel>
+                    <TextBlock Text="{Binding [create_contract], Source={StaticResource Loc}}" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="{DynamicResource TextPrimaryBrush}"/>
+
+                    <!-- Content -->
+                    <Grid Margin="0,0,0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding [content], Source={StaticResource Loc}}" Foreground="{DynamicResource TextPrimaryBrush}" Margin="5,0"/>
+                        <TextBox Text="{Binding Content}" AcceptsReturn="True" TextWrapping="Wrap" Height="60" Width="300" Margin="5,5,5,5"
+                                 Style="{DynamicResource CustomTextBoxStyle}" Foreground="{DynamicResource TextPrimaryBrush}" Grid.Row="1"/>
+                    </Grid>
+
+                    <!-- Sign Date -->
+                    <Grid Margin="0,0,0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding [sign_date], Source={StaticResource Loc}}" Foreground="{DynamicResource TextPrimaryBrush}" Margin="5,0"/>
+                        <DatePicker SelectedDate="{Binding SignDate}" Width="300" Margin="5,5,5,5" Grid.Row="1"
+                                    Style="{DynamicResource CustomDatePickerStyle}" Foreground="Black"/>
+                    </Grid>
+
+                    <!-- Period Vazenja -->
+                    <Grid Margin="0,0,0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding [period], Source={StaticResource Loc}}" Foreground="{DynamicResource TextPrimaryBrush}" Margin="5,0"/>
+                        <TextBox Text="{Binding PeriodVazenja}" Width="300" Margin="5,5,5,5" Grid.Row="1"
+                                 Style="{DynamicResource CustomTextBoxStyle}" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                    </Grid>
+
+                    <!-- Client Selection -->
+                    <Grid Margin="0,0,0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding [client], Source={StaticResource Loc}}" Foreground="{DynamicResource TextPrimaryBrush}" Margin="5,0"/>
+                        <ComboBox ItemsSource="{Binding ClientOptions}" SelectedItem="{Binding SelectedClient}"
+                                  Width="300" Margin="5,5,5,5" Grid.Row="1"
+                                  Style="{DynamicResource ComboBoxFlatStyle}"/>
+                    </Grid>
+
+                    <Label Content="{Binding StatusMessage}" Foreground="Red" FontSize="12" HorizontalContentAlignment="Center"/>
+
+                    <!-- Buttons -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                        <Button x:Name="SaveContract" Content="{Binding [add], Source={StaticResource Loc}}" Style="{DynamicResource DarkerButtonStyle}" Margin="0,0,10,0" Width="80" Height="30"/>
+                        <Button x:Name="Cancel" Content="{Binding [cancel], Source={StaticResource Loc}}" Style="{DynamicResource DarkerButtonStyle}" Width="80"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Viewbox>
+</UserControl>

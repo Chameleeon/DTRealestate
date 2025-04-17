@@ -1,0 +1,340 @@
+﻿<UserControl x:Class="Nekretnine.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Nekretnine.Views"
+             xmlns:localize="clr-namespace:Nekretnine.Localization"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+
+    <UserControl.Resources>
+        <ObjectDataProvider x:Key="Loc"
+            ObjectType="{x:Type localize:Localizer}"
+            MethodName="get_Instance" />
+        <!-- Base Language Button Style -->
+        <Style x:Key="LanguageButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="{DynamicResource ButtonTextBrush}" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Padding" Value="5,3" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Margin" Value="10,0,10,0" />
+            <Setter Property="BorderThickness" Value="2.5" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="HighlightBorder"
+                            Background="{DynamicResource LoginButtonBgBrush}"
+                            CornerRadius="6"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          Margin="10,5"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="HighlightBorder" Property="Background" Value="{DynamicResource LoginButtonHoverBrush}" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="HighlightBorder" Property="Background" Value="{DynamicResource ButtonPressedBrush}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- English Language Button Style -->
+        <Style x:Key="EnglishButtonStyle" TargetType="Button" BasedOn="{StaticResource LanguageButtonStyle}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding SelectedLanguage}" Value="en">
+                    <Setter Property="BorderBrush" Value="{DynamicResource HighlightPrimaryBrush}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Serbian Language Button Style -->
+        <Style x:Key="SerbianButtonStyle" TargetType="Button" BasedOn="{StaticResource LanguageButtonStyle}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding SelectedLanguage}" Value="sr">
+                    <Setter Property="BorderBrush" Value="{DynamicResource HighlightPrimaryBrush}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+
+
+
+        <Style x:Key="ThemeButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="120"/>
+            <Setter Property="Margin" Value="15"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="ButtonBorder" 
+                                    CornerRadius="12" 
+                                    BorderThickness="1" 
+                                    BorderBrush="#AAA">
+                                <Grid>
+                                    <Grid.Clip>
+                                        <RectangleGeometry Rect="0,0,120,120" RadiusX="12" RadiusY="12"/>
+                                    </Grid.Clip>
+
+                                    <!-- Top half - Light color -->
+                                    <Path x:Name="TopHalf" 
+                                          Data="M0,0 L120,0 L0,120 Z" 
+                                          Stretch="Fill"/>
+
+                                    <!-- Bottom half - Dark color -->
+                                    <Path x:Name="BottomHalf" 
+                                          Data="M120,0 L120,120 L0,120 Z" 
+                                          Stretch="Fill"/>
+
+                                    <ContentPresenter HorizontalAlignment="Center" 
+                                                      VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.85"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Opacity" Value="0.7"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Dark Theme Button Style -->
+        <Style x:Key="DarkThemeButtonStyle" TargetType="Button" BasedOn="{StaticResource ThemeButtonStyle}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding CurrentThemeName}" Value="Dark">
+                    <Setter Property="BorderBrush" Value="{DynamicResource HighlightPrimaryBrush}" />
+                    <Setter Property="BorderThickness" Value="5" />
+                </DataTrigger>
+            </Style.Triggers>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="ButtonBorder" 
+                            CornerRadius="12" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{TemplateBinding BorderBrush}">
+                                <Grid>
+                                    <Grid.Clip>
+                                        <RectangleGeometry Rect="0,0,120,120" RadiusX="12" RadiusY="12"/>
+                                    </Grid.Clip>
+                                    <Path Data="M0,0 L120,0 L0,120 Z" Fill="#5F4A75" Stretch="Fill"/>
+                                    <Path Data="M120,0 L120,120 L0,120 Z" Fill="#2F2B33" Stretch="Fill"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.85"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Opacity" Value="0.7"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <!-- Light Theme Button Style -->
+        <Style x:Key="LightThemeButtonStyle" TargetType="Button" BasedOn="{StaticResource ThemeButtonStyle}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding CurrentThemeName}" Value="Light">
+                    <Setter Property="BorderBrush" Value="{DynamicResource HighlightPrimaryBrush}" />
+                    <Setter Property="BorderThickness" Value="5" />
+                </DataTrigger>
+            </Style.Triggers>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="ButtonBorder" 
+                            CornerRadius="12" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{TemplateBinding BorderBrush}">
+                                <Grid>
+                                    <Grid.Clip>
+                                        <RectangleGeometry Rect="0,0,120,120" RadiusX="12" RadiusY="12"/>
+                                    </Grid.Clip>
+
+                                    <!-- Top half - Light color -->
+                                    <Path x:Name="TopHalf" 
+                                  Data="M0,0 L120,0 L0,120 Z" 
+                                  Fill="#FFFFFF" 
+                                  Stretch="Fill"/>
+
+                                    <!-- Bottom half - Dark color -->
+                                    <Path x:Name="BottomHalf" 
+                                  Data="M120,0 L120,120 L0,120 Z" 
+                                  Fill="#71B9E1" 
+                                  Stretch="Fill"/>
+
+                                    <ContentPresenter HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.85"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Opacity" Value="0.7"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Flame Theme Button Style -->
+        <Style x:Key="FlameThemeButtonStyle" TargetType="Button" BasedOn="{StaticResource ThemeButtonStyle}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding CurrentThemeName}" Value="Flame">
+                    <Setter Property="BorderBrush" Value="{DynamicResource HighlightPrimaryBrush}" />
+                    <Setter Property="BorderThickness" Value="5" />
+                </DataTrigger>
+            </Style.Triggers>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="ButtonBorder" 
+                            CornerRadius="12" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{TemplateBinding BorderBrush}">
+                                <Grid>
+                                    <Grid.Clip>
+                                        <RectangleGeometry Rect="0,0,120,120" RadiusX="12" RadiusY="12"/>
+                                    </Grid.Clip>
+
+                                    <!-- Top half - Light color (Blue-ish) -->
+                                    <Path x:Name="TopHalf" 
+                                  Data="M0,0 L120,0 L0,120 Z" 
+                                  Fill="#E07F3F" 
+                                  Stretch="Fill"/>
+
+                                    <!-- Bottom half - Dark color (Deeper blue) -->
+                                    <Path x:Name="BottomHalf" 
+                                  Data="M120,0 L120,120 L0,120 Z" 
+                                  Fill="#BF392A" 
+                                  Stretch="Fill"/>
+
+                                    <ContentPresenter HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.85"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Opacity" Value="0.7"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0" 
+                   Text="{Binding [settings], Source={StaticResource Loc}}" 
+                   FontSize="24" 
+                   Margin="20,20,0,20"
+                   Foreground="{DynamicResource TextPrimaryBrush}"
+                   FontWeight="Medium"/>
+
+        <!-- Theme Selection Section -->
+        <StackPanel Grid.Row="1" Margin="20,0,20,20">
+            <TextBlock Text="{Binding [select_theme], Source={StaticResource Loc}}" 
+                       FontSize="18"
+                       Foreground="{DynamicResource TextPrimaryBrush}"
+                       Margin="0,0,0,20"/>
+
+            <WrapPanel HorizontalAlignment="Left">
+                <!-- Dark Theme Button -->
+                <Button x:Name="SelectDarkTheme" 
+                        Style="{StaticResource DarkThemeButtonStyle}">
+                    <StackPanel>
+                        <TextBlock Text="{Binding [dark], Source={StaticResource Loc}}" 
+                                   Foreground="White" 
+                                   FontSize="18" 
+                                   FontWeight="Medium"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- Light Theme Button -->
+                <Button x:Name="SelectLightTheme" 
+                        Style="{StaticResource LightThemeButtonStyle}">
+                    <StackPanel>
+                        <TextBlock Text="{Binding [light], Source={StaticResource Loc}}" 
+                                   Foreground="#333333" 
+                                   FontSize="18" 
+                                   FontWeight="Medium"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- Flame Theme Button -->
+                <Button x:Name="SelectFlameTheme" 
+                        Style="{StaticResource FlameThemeButtonStyle}">
+                    <StackPanel>
+                        <TextBlock Text="{Binding [flame], Source={StaticResource Loc}}" 
+                                   Foreground="White" 
+                                   FontSize="18" 
+                                   FontWeight="Medium"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </WrapPanel>
+
+            <TextBlock Text="{Binding [select_language], Source={StaticResource Loc}}"
+           FontSize="18"
+           Foreground="{DynamicResource TextPrimaryBrush}"
+           Margin="0,30,0,10"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button x:Name="SetEnglish"
+            Content="{Binding [english], Source={StaticResource Loc}}"
+            Style="{StaticResource EnglishButtonStyle}"/>
+
+                <Button x:Name="SetSerbian"
+            Content="{Binding [serbian], Source={StaticResource Loc}}"
+            Style="{StaticResource SerbianButtonStyle}"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

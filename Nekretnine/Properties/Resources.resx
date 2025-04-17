@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="actions_table" xml:space="preserve">
+    <value>Actions</value>
+    <comment>AdminAgents</comment>
+  </data>
+  <data name="activated" xml:space="preserve">
+    <value>Activated</value>
+    <comment>AdminAgents</comment>
+  </data>
+  <data name="activated_agents" xml:space="preserve">
+    <value>Activated Agents</value>
+    <comment>AdminHome</comment>
+  </data>
+  <data name="activate_button" xml:space="preserve">
+    <value>Activate</value>
+    <comment>AdminAgents</comment>
+  </data>
+  <data name="active_offers" xml:space="preserve">
+    <value>Active Offers</value>
+  </data>
+  <data name="add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="add_realestate" xml:space="preserve">
+    <value>Add Realestate</value>
+  </data>
+  <data name="agents" xml:space="preserve">
+    <value>Agents</value>
+    <comment>Sidebar</comment>
+  </data>
+  <data name="all_selection" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="browse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="city" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="click_details" xml:space="preserve">
+    <value>Click 'Details' to view contract details.</value>
+  </data>
+  <data name="client" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="completed_contracts" xml:space="preserve">
+    <value>Completed Contracts</value>
+  </data>
+  <data name="confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="confirm_passwd" xml:space="preserve">
+    <value>Confirm password:</value>
+    <comment>signup</comment>
+  </data>
+  <data name="content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="contract" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="contracts" xml:space="preserve">
+    <value>Contracts</value>
+  </data>
+  <data name="contract_content" xml:space="preserve">
+    <value>Contract content</value>
+  </data>
+  <data name="contract_details" xml:space="preserve">
+    <value>Contract Details</value>
+  </data>
+  <data name="contract_id" xml:space="preserve">
+    <value>Contract ID</value>
+  </data>
+  <data name="contract_type" xml:space="preserve">
+    <value>Contract Type</value>
+  </data>
+  <data name="create_contract" xml:space="preserve">
+    <value>Create Contract</value>
+  </data>
+  <data name="create_offer" xml:space="preserve">
+    <value>Create Offer</value>
+  </data>
+  <data name="create_success" xml:space="preserve">
+    <value>Your account has been created successfully. You must wait until an administrator activates your account before you can use it.</value>
+    <comment>SignupError</comment>
+  </data>
+  <data name="dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="date" xml:space="preserve">
+    <value>Date: </value>
+  </data>
+  <data name="deactivated" xml:space="preserve">
+    <value>Deactivated</value>
+    <comment>AdminAgents</comment>
+  </data>
+  <data name="deactivated_agents" xml:space="preserve">
+    <value>Deactivated Agents</value>
+    <comment>AdminHome</comment>
+  </data>
+  <data name="deactivate_button" xml:space="preserve">
+    <value>Deactivate</value>
+    <comment>AdminAgents</comment>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="details_offer" xml:space="preserve">
+    <value>Offer Details</value>
+  </data>
+  <data name="details_realestate" xml:space="preserve">
+    <value>Realestate Details</value>
+  </data>
+  <data name="edit_offer" xml:space="preserve">
+    <value>Edit Offer</value>
+  </data>
+  <data name="edit_realestate" xml:space="preserve">
+    <value>Edit Realestate</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Email:</value>
+    <comment>Signup</comment>
+  </data>
+  <data name="email_table" xml:space="preserve">
+    <value>Email</value>
+    <comment>AdminAgents</comment>
+  </data>
+  <data name="english" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="error_confirm_pass" xml:space="preserve">
+    <value>The passwords do not match.</value>
+    <comment>SignupError</comment>
+  </data>
+  <data name="error_content_empty" xml:space="preserve">
+    <value>Content cannot be empty.</value>
+  </data>
+  <data name="error_contract" xml:space="preserve">
+    <value>Error saving contract. Please try again later.</value>
+  </data>
+  <data name="error_email" xml:space="preserve">
+    <value>Invalid email.</value>
+    <comment>SignupError</comment>
+  </data>
+  <data name="error_password" xml:space="preserve">
+    <value>Password must be at least 8 characters long.</value>
+    <comment>SignupError</comment>
+  </data>
+  <data name="error_phone" xml:space="preserve">
+    <value>Invalid phone number. Use digits only, 7-15 characters.</value>
+    <comment>SignupError</comment>
+  </data>
+  <data name="error_realestate" xml:space="preserve">
+    <value>Error saving realestate. Try again later.</value>
+  </data>
+  <data name="error_select_client" xml:space="preserve">
+    <value>Client not selected.</value>
+  </data>
+  <data name="error_signed_date" xml:space="preserve">
+    <value>Signed date not selected.</value>
+  </data>
+  <data name="error_square_meterage" xml:space="preserve">
+    <value>Invalid square meterage. Only numbers allowed.</value>
+  </data>
+  <data name="error_username" xml:space="preserve">
+    <value>Username can only contain letters and numbers.</value>
+    <comment>SignupError</comment>
+  </data>
+  <data name="error_valid_period" xml:space="preserve">
+    <value>Validity period must be a number greater than zero.</value>
+  </data>
+  <data name="filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="firstname_table" xml:space="preserve">
+    <value>First Name</value>
+    <comment>AdminAgents</comment>
+  </data>
+  <data name="first_name" xml:space="preserve">
+    <value>First Name:</value>
+    <comment>Signup</comment>
+  </data>
+  <data name="flame" xml:space="preserve">
+    <value>Flame</value>
+  </data>
+  <data name="for_rent" xml:space="preserve">
+    <value>For Rent</value>
+  </data>
+  <data name="for_sale" xml:space="preserve">
+    <value>For Sale</value>
+  </data>
+  <data name="has_offer" xml:space="preserve">
+    <value>Has Offer</value>
+  </data>
+  <data name="have_acc" xml:space="preserve">
+    <value>Already have an account? </value>
+    <comment>Signup</comment>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="images" xml:space="preserve">
+    <value>Images</value>
+  </data>
+  <data name="inbox" xml:space="preserve">
+    <value>Inbox</value>
+  </data>
+  <data name="inquiries" xml:space="preserve">
+    <value>Inquiries</value>
+  </data>
+  <data name="invalid_price" xml:space="preserve">
+    <value>Invalid price. Use only numbers.</value>
+  </data>
+  <data name="invalid_user_or_pass" xml:space="preserve">
+    <value>Invalid username or password.</value>
+    <comment>LoginError</comment>
+  </data>
+  <data name="lastname_table" xml:space="preserve">
+    <value>Last Name</value>
+    <comment>AdminAgents</comment>
+  </data>
+  <data name="last_name" xml:space="preserve">
+    <value>Last Name:</value>
+    <comment>Signup</comment>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="login_welcome" xml:space="preserve">
+    <value>Log In</value>
+    <comment>LoginView</comment>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>Log out</value>
+    <comment>Sidebar</comment>
+  </data>
+  <data name="mandatory_fields" xml:space="preserve">
+    <value>All fields are mandatory.</value>
+    <comment>Error</comment>
+  </data>
+  <data name="months" xml:space="preserve">
+    <value>months</value>
+  </data>
+  <data name="newest" xml:space="preserve">
+    <value>Newest</value>
+  </data>
+  <data name="newest_first" xml:space="preserve">
+    <value>Newest First</value>
+  </data>
+  <data name="noacc" xml:space="preserve">
+    <value>Don't have an account? </value>
+    <comment>LoginView</comment>
+  </data>
+  <data name="no_offer" xml:space="preserve">
+    <value>Has No Offers</value>
+  </data>
+  <data name="number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="offers" xml:space="preserve">
+    <value>Offers</value>
+  </data>
+  <data name="offer_type" xml:space="preserve">
+    <value>Offer Type</value>
+  </data>
+  <data name="offer_update_error" xml:space="preserve">
+    <value>An error occurred. Please try again later.</value>
+  </data>
+  <data name="offer_update_success" xml:space="preserve">
+    <value>Offer updated successfully.</value>
+  </data>
+  <data name="oldest" xml:space="preserve">
+    <value>Oldest</value>
+  </data>
+  <data name="oldest_first" xml:space="preserve">
+    <value>Oldest First</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Password:</value>
+    <comment>LoginSignupView</comment>
+  </data>
+  <data name="pdf_error" xml:space="preserve">
+    <value>Failed to generate PDF! Try again later.</value>
+  </data>
+  <data name="pdf_success" xml:space="preserve">
+    <value>PDF generated successfully.</value>
+  </data>
+  <data name="period" xml:space="preserve">
+    <value>Period of validity (in months)</value>
+  </data>
+  <data name="phonenum_table" xml:space="preserve">
+    <value>Phone Number</value>
+    <comment>AdminAgents</comment>
+  </data>
+  <data name="phone_num" xml:space="preserve">
+    <value>Phone Number:</value>
+    <comment>Signup</comment>
+  </data>
+  <data name="price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="realestates" xml:space="preserve">
+    <value>Realestates</value>
+  </data>
+  <data name="realestate_type" xml:space="preserve">
+    <value>Realestate Type</value>
+  </data>
+  <data name="realestate_update_error" xml:space="preserve">
+    <value>Error updating realestate. Try again later.</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="save_edit" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="save_pdf" xml:space="preserve">
+    <value>Save as PDF</value>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="select_language" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="select_theme" xml:space="preserve">
+    <value>Select Theme</value>
+  </data>
+  <data name="serbian" xml:space="preserve">
+    <value>Serbian</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="short_desc" xml:space="preserve">
+    <value>Short Description</value>
+  </data>
+  <data name="signup" xml:space="preserve">
+    <value>Sign up</value>
+    <comment>LoginView</comment>
+  </data>
+  <data name="signup_error" xml:space="preserve">
+    <value>An error occurred. Please try again later.</value>
+    <comment>SignupError</comment>
+  </data>
+  <data name="sign_date" xml:space="preserve">
+    <value>Sign date</value>
+  </data>
+  <data name="sort" xml:space="preserve">
+    <value>Sort By</value>
+  </data>
+  <data name="sqr_footage" xml:space="preserve">
+    <value>Square meterage</value>
+  </data>
+  <data name="status_table" xml:space="preserve">
+    <value>Status</value>
+    <comment>AdminAgents</comment>
+  </data>
+  <data name="street" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="username" xml:space="preserve">
+    <value>Username:</value>
+    <comment>LoginSignupView</comment>
+  </data>
+  <data name="username_table" xml:space="preserve">
+    <value>Username</value>
+    <comment>AdminAgents</comment>
+  </data>
+  <data name="user_exists" xml:space="preserve">
+    <value>User with that username already exists.</value>
+    <comment>SignupError</comment>
+  </data>
+  <data name="valid_for" xml:space="preserve">
+    <value>Valid for</value>
+  </data>
+  <data name="wait_for_activation" xml:space="preserve">
+    <value>You must wait for an administrator to activate your account.</value>
+    <comment>LoginError</comment>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Welcome!</value>
+    <comment>LoginView</comment>
+  </data>
+  <data name="welcome_admin" xml:space="preserve">
+    <value>Welcome Admin!</value>
+    <comment>AdminHome</comment>
+  </data>
+  <data name="welcome_agent" xml:space="preserve">
+    <value>Welcome agent!</value>
+  </data>
+</root>

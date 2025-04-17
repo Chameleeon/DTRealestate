@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="actions_table" xml:space="preserve">
+    <value>Akcije</value>
+  </data>
+  <data name="activated" xml:space="preserve">
+    <value>Aktiviran</value>
+  </data>
+  <data name="activated_agents" xml:space="preserve">
+    <value>Aktiviranih agenata</value>
+  </data>
+  <data name="activate_button" xml:space="preserve">
+    <value>Aktiviraj</value>
+  </data>
+  <data name="active_offers" xml:space="preserve">
+    <value>Aktivne Ponude</value>
+  </data>
+  <data name="add" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="address" xml:space="preserve">
+    <value>Adresa</value>
+  </data>
+  <data name="add_realestate" xml:space="preserve">
+    <value>Dodaj nekretninu</value>
+  </data>
+  <data name="agents" xml:space="preserve">
+    <value>Agenti</value>
+  </data>
+  <data name="all_selection" xml:space="preserve">
+    <value>Sve</value>
+  </data>
+  <data name="browse" xml:space="preserve">
+    <value>Pretraži</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Otkaži</value>
+  </data>
+  <data name="city" xml:space="preserve">
+    <value>Grad</value>
+  </data>
+  <data name="click_details" xml:space="preserve">
+    <value>Kliknite na 'Detalji' kako biste vidjeli detalje ugovora.</value>
+  </data>
+  <data name="client" xml:space="preserve">
+    <value>Klijent</value>
+  </data>
+  <data name="close" xml:space="preserve">
+    <value>Zatvori</value>
+  </data>
+  <data name="completed_contracts" xml:space="preserve">
+    <value>Završeni Ugovori</value>
+  </data>
+  <data name="confirm" xml:space="preserve">
+    <value>Potvrdi</value>
+  </data>
+  <data name="confirm_passwd" xml:space="preserve">
+    <value>Potvrdite lozinku:</value>
+  </data>
+  <data name="content" xml:space="preserve">
+    <value>Sadržaj</value>
+  </data>
+  <data name="contract" xml:space="preserve">
+    <value>Ugovor</value>
+  </data>
+  <data name="contracts" xml:space="preserve">
+    <value>Ugovori</value>
+  </data>
+  <data name="contract_content" xml:space="preserve">
+    <value>Sadržaj ugovora</value>
+  </data>
+  <data name="contract_details" xml:space="preserve">
+    <value>Detalji ugovora</value>
+  </data>
+  <data name="contract_id" xml:space="preserve">
+    <value>ID Ugovora</value>
+  </data>
+  <data name="contract_type" xml:space="preserve">
+    <value>Tip Ugovora</value>
+  </data>
+  <data name="create_contract" xml:space="preserve">
+    <value>Kreiraj ugovor</value>
+  </data>
+  <data name="create_offer" xml:space="preserve">
+    <value>Kreiraj Ponudu</value>
+  </data>
+  <data name="create_success" xml:space="preserve">
+    <value>Vaš nalog je uspješno kreiran. Morate sačekati da administrator aktivira vaš nalog prije nego što ga možete koristiti.</value>
+  </data>
+  <data name="dark" xml:space="preserve">
+    <value>Tamni</value>
+  </data>
+  <data name="date" xml:space="preserve">
+    <value>Datum: </value>
+  </data>
+  <data name="deactivated" xml:space="preserve">
+    <value>Deaktiviran</value>
+  </data>
+  <data name="deactivated_agents" xml:space="preserve">
+    <value>Deaktiviranih agenata</value>
+  </data>
+  <data name="deactivate_button" xml:space="preserve">
+    <value>Deaktiviraj</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>Detalji</value>
+  </data>
+  <data name="details_offer" xml:space="preserve">
+    <value>Detalji o ponudi</value>
+  </data>
+  <data name="details_realestate" xml:space="preserve">
+    <value>Detalji o nekretnini</value>
+  </data>
+  <data name="edit_offer" xml:space="preserve">
+    <value>Izmjena ponude</value>
+  </data>
+  <data name="edit_realestate" xml:space="preserve">
+    <value>Izmjena nekretnine</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="email_table" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="english" xml:space="preserve">
+    <value>Engleski</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Greška</value>
+  </data>
+  <data name="error_confirm_pass" xml:space="preserve">
+    <value>Lozinke se moraju podudarati.</value>
+  </data>
+  <data name="error_content_empty" xml:space="preserve">
+    <value>Sadržaj ne može biti prazan.</value>
+  </data>
+  <data name="error_contract" xml:space="preserve">
+    <value>Greška pri čuvanju ugovora. Pokušajte ponovo kasnije.</value>
+  </data>
+  <data name="error_email" xml:space="preserve">
+    <value>Email nije validan.</value>
+  </data>
+  <data name="error_password" xml:space="preserve">
+    <value>Lozinka mora da sadrži bar 8 karaktera.</value>
+  </data>
+  <data name="error_phone" xml:space="preserve">
+    <value>Broj telefona nije validan. Koristite samo cifre, 7-15 karaktera.</value>
+  </data>
+  <data name="error_realestate" xml:space="preserve">
+    <value>Greška pri čuvanju nekretnine. Pokušajte ponovo kasnije.</value>
+  </data>
+  <data name="error_select_client" xml:space="preserve">
+    <value>Klijent nije odabran.</value>
+  </data>
+  <data name="error_signed_date" xml:space="preserve">
+    <value>Datum potpisivanja nije odabran.</value>
+  </data>
+  <data name="error_square_meterage" xml:space="preserve">
+    <value>Kvadratura nije validna. Dozvoljeni su samo brojevi.</value>
+  </data>
+  <data name="error_username" xml:space="preserve">
+    <value>Korisničko ime može da sadrži samo slova i brojeve.</value>
+  </data>
+  <data name="error_valid_period" xml:space="preserve">
+    <value>Period važenja mora biti broj veći od nule.</value>
+  </data>
+  <data name="filter" xml:space="preserve">
+    <value>Filtriraj</value>
+  </data>
+  <data name="firstname_table" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="first_name" xml:space="preserve">
+    <value>Ime:</value>
+  </data>
+  <data name="flame" xml:space="preserve">
+    <value>Plamen</value>
+  </data>
+  <data name="for_rent" xml:space="preserve">
+    <value>Najam</value>
+  </data>
+  <data name="for_sale" xml:space="preserve">
+    <value>Na prodaju</value>
+  </data>
+  <data name="has_offer" xml:space="preserve">
+    <value>Ima ponude</value>
+  </data>
+  <data name="have_acc" xml:space="preserve">
+    <value>Već imate nalog? </value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Početak</value>
+  </data>
+  <data name="images" xml:space="preserve">
+    <value>Slike</value>
+  </data>
+  <data name="inbox" xml:space="preserve">
+    <value>Poruke</value>
+  </data>
+  <data name="inquiries" xml:space="preserve">
+    <value>Upiti</value>
+  </data>
+  <data name="invalid_price" xml:space="preserve">
+    <value>Cijena nije validna. Koristite samo brojeve.</value>
+  </data>
+  <data name="invalid_user_or_pass" xml:space="preserve">
+    <value>Netačno korisničko ime ili lozinka.</value>
+  </data>
+  <data name="lastname_table" xml:space="preserve">
+    <value>Prezime</value>
+  </data>
+  <data name="last_name" xml:space="preserve">
+    <value>Prezime:</value>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>Svijetli</value>
+  </data>
+  <data name="login_welcome" xml:space="preserve">
+    <value>Prijavite se</value>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>Odjavi se</value>
+  </data>
+  <data name="mandatory_fields" xml:space="preserve">
+    <value>Sva polja su obavezna.</value>
+  </data>
+  <data name="months" xml:space="preserve">
+    <value>mjeseci</value>
+  </data>
+  <data name="newest" xml:space="preserve">
+    <value>Najnovije</value>
+  </data>
+  <data name="newest_first" xml:space="preserve">
+    <value>Najnovije prvo</value>
+  </data>
+  <data name="noacc" xml:space="preserve">
+    <value>Nemate nalog? </value>
+  </data>
+  <data name="no_offer" xml:space="preserve">
+    <value>Nema ponude</value>
+  </data>
+  <data name="number" xml:space="preserve">
+    <value>Broj</value>
+  </data>
+  <data name="offers" xml:space="preserve">
+    <value>Ponude</value>
+  </data>
+  <data name="offer_type" xml:space="preserve">
+    <value>Tip ponude</value>
+  </data>
+  <data name="offer_update_error" xml:space="preserve">
+    <value>Došlo je do greške. Molimo vas pokušajte kasnije.</value>
+  </data>
+  <data name="offer_update_success" xml:space="preserve">
+    <value>Ponuda je uspješno ažurirana.</value>
+  </data>
+  <data name="oldest" xml:space="preserve">
+    <value>Najstarije</value>
+  </data>
+  <data name="oldest_first" xml:space="preserve">
+    <value>Najstarije prvo</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Lozinka:</value>
+  </data>
+  <data name="pdf_error" xml:space="preserve">
+    <value>Generisanje PDF-a nije uspjelo. Pokušajte ponovo kasnije.</value>
+  </data>
+  <data name="pdf_success" xml:space="preserve">
+    <value>PDF uspješno generisan</value>
+  </data>
+  <data name="period" xml:space="preserve">
+    <value>Vrijeme trajanja (u mjesecima)</value>
+  </data>
+  <data name="phonenum_table" xml:space="preserve">
+    <value>Broj telefona</value>
+  </data>
+  <data name="phone_num" xml:space="preserve">
+    <value>Broj telefona:</value>
+  </data>
+  <data name="price" xml:space="preserve">
+    <value>Cijena</value>
+  </data>
+  <data name="realestates" xml:space="preserve">
+    <value>Nekretnine</value>
+  </data>
+  <data name="realestate_type" xml:space="preserve">
+    <value>Tip nekretnine</value>
+  </data>
+  <data name="realestate_update_error" xml:space="preserve">
+    <value>Greška pri ažuriranju nekretnina. Pokušajte ponovo kasnije.</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="save_edit" xml:space="preserve">
+    <value>Sačuvaj</value>
+  </data>
+  <data name="save_pdf" xml:space="preserve">
+    <value>Sačuvaj kao PDF</value>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>Pretraga</value>
+  </data>
+  <data name="select_language" xml:space="preserve">
+    <value>Odaberite jezik</value>
+  </data>
+  <data name="select_theme" xml:space="preserve">
+    <value>Odaberite izgled</value>
+  </data>
+  <data name="serbian" xml:space="preserve">
+    <value>Srpski</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Podešavanja</value>
+  </data>
+  <data name="short_desc" xml:space="preserve">
+    <value>Kratki opis</value>
+  </data>
+  <data name="signup" xml:space="preserve">
+    <value>Registrujte se</value>
+  </data>
+  <data name="signup_error" xml:space="preserve">
+    <value>Došlo je do greške. Pokušajte kasnije.</value>
+  </data>
+  <data name="sign_date" xml:space="preserve">
+    <value>Datum potpisivanja</value>
+  </data>
+  <data name="sort" xml:space="preserve">
+    <value>Sortiraj</value>
+  </data>
+  <data name="sqr_footage" xml:space="preserve">
+    <value>Kvadratura</value>
+  </data>
+  <data name="status_table" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="street" xml:space="preserve">
+    <value>Ulica</value>
+  </data>
+  <data name="success" xml:space="preserve">
+    <value>Uspješno</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Naziv</value>
+  </data>
+  <data name="username" xml:space="preserve">
+    <value>Korisničko ime:</value>
+  </data>
+  <data name="username_table" xml:space="preserve">
+    <value>Korisničko ime</value>
+  </data>
+  <data name="user_exists" xml:space="preserve">
+    <value>Korisnik sa tim korisničkim imenom već postoji.</value>
+  </data>
+  <data name="valid_for" xml:space="preserve">
+    <value>Vrijedi</value>
+  </data>
+  <data name="wait_for_activation" xml:space="preserve">
+    <value>Morate sačekati da administrator aktivira vaš nalog.</value>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Dobro došli!</value>
+  </data>
+  <data name="welcome_admin" xml:space="preserve">
+    <value>Dobro došli, administrator!</value>
+  </data>
+  <data name="welcome_agent" xml:space="preserve">
+    <value>Dobro došli, agent!</value>
+  </data>
+</root>

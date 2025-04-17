@@ -1,0 +1,180 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Nekretnine.Converters"
+                    xmlns:vm="clr-namespace:Nekretnine.ViewModels">
+
+    <Style x:Key="CustomButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource ButtonTextBrush}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Background Rectangle -->
+                        <Rectangle Name="BackgroundRectangle" Fill="Transparent" RadiusX="5" RadiusY="5"/>
+
+                        <!-- Button Content -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- Hover Effect -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BackgroundRectangle" Property="Fill" Value="{DynamicResource ButtonHoverBrush}"/>
+                        </Trigger>
+
+                        <!-- Clicked (Pressed) Effect -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BackgroundRectangle" Property="Fill" Value="{DynamicResource ButtonPressedBrush}"/>
+                        </Trigger>
+						
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DarkerButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource ButtonTextBrush}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Background Rectangle -->
+                        <Rectangle Name="BackgroundRectangle" Fill="{DynamicResource LoginButtonBgBrush}" RadiusX="5" RadiusY="5"/>
+
+                        <!-- Button Content -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- Hover Effect -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BackgroundRectangle" Property="Fill" Value="{DynamicResource LoginButtonHoverBrush}"/>
+                        </Trigger>
+
+                        <!-- Clicked (Pressed) Effect -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BackgroundRectangle" Property="Fill" Value="{DynamicResource ButtonPressedBrush}"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SidebarButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource SidebarBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource ButtonTextBrush}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Background Rectangle -->
+                        <Rectangle Name="BackgroundRectangle" Fill="{DynamicResource SidebarBackgroundBrush}" RadiusX="5" RadiusY="5"/>
+
+                        <!-- Button Content -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- Hover Effect -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BackgroundRectangle" Property="Fill" Value="{DynamicResource SidebarBackgroundBrush}"/>
+                        </Trigger>
+
+                        <!-- Clicked (Pressed) Effect -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BackgroundRectangle" Property="Fill" Value="{DynamicResource ButtonPressedBrush}"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DarkerButtonDisabledStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource ButtonTextBrush}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Background Rectangle -->
+                        <Rectangle Name="BackgroundRectangle" Fill="{DynamicResource DarkerButtonDisabledBrush}" RadiusX="5" RadiusY="5"/>
+
+                        <!-- Button Content -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- Hover Effect -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BackgroundRectangle" Property="Fill" Value="{DynamicResource DarkerButtonDisabledBrush}"/>
+                        </Trigger>
+
+                        <!-- Clicked (Pressed) Effect -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BackgroundRectangle" Property="Fill" Value="{DynamicResource DarkerButtonDisabledBrush}"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DetailButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource LoginButtonBgBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ButtonTextBrush}"/>
+        <Setter Property="Padding" Value="12,6"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="4" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource LoginButtonHoverBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="PdfButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource LoginButtonBgBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ButtonTextBrush}"/>
+        <Setter Property="Padding" Value="12,6"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="4" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource LoginButtonHoverBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

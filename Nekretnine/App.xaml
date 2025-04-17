@@ -1,0 +1,19 @@
+﻿<Application x:Class="Nekretnine.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Nekretnine">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <local:Bootstrapper x:Key="bootstrapper"/>
+                </ResourceDictionary>
+                <ResourceDictionary Source="Styles/Themes/Light.xaml"/>
+                <ResourceDictionary Source="Styles/Buttons/ButtonStyle.xaml"/>
+                <ResourceDictionary Source="Styles/TextBox/TBStyles.xaml"/>
+                <ResourceDictionary Source="Styles/DropDown/DropDownStyle.xaml"/>
+                <ResourceDictionary Source="Styles/ListBox/ListBoxFlatStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

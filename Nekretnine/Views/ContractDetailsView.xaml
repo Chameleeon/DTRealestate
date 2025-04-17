@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="Nekretnine.Views.ContractDetailsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:localize="clr-namespace:Nekretnine.Localization"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="400">
+    
+    <UserControl.Resources>
+        <ObjectDataProvider x:Key="Loc"
+            ObjectType="{x:Type localize:Localizer}"
+            MethodName="get_Instance" />
+    </UserControl.Resources>
+
+    <Viewbox Stretch="Uniform">
+        <Grid Width="500" Height="500">
+            <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="12" Padding="20"
+                    Background="{DynamicResource BackgroundBrush}">
+                <StackPanel>
+                    <!-- Header -->
+                    <TextBlock Text="{Binding [contract_details], Source={StaticResource Loc}}" FontSize="18" FontWeight="Bold"
+                               Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,20"/>
+
+                    <!-- Contract ID -->
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="{Binding [contract_id], Source={StaticResource Loc}}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                        <TextBlock Text="{Binding ContractId}" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                    </StackPanel>
+
+                    <!-- Sign Date -->
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="{Binding [sign_date], Source={StaticResource Loc}}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                        <TextBlock Text="{Binding SignDate, StringFormat='{}{0:MMM dd, yyyy}'}"
+                                   Foreground="{DynamicResource TextPrimaryBrush}"/>
+                    </StackPanel>
+
+                    <!-- Address -->
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="{Binding [address], Source={StaticResource Loc}}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                        <TextBlock Text="{Binding Address}" TextWrapping="Wrap"
+                                   Foreground="{DynamicResource TextPrimaryBrush}"/>
+                    </StackPanel>
+
+                    <!-- Content -->
+                    <StackPanel Margin="0,0,0,20">
+                        <TextBlock Text="{Binding [contract_content], Source={StaticResource Loc}}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                        <ScrollViewer Height="200" VerticalScrollBarVisibility="Auto">
+                            <TextBlock Text="{Binding Content}" TextWrapping="Wrap"
+                                       Foreground="{DynamicResource TextPrimaryBrush}" FontSize="13"/>
+                        </ScrollViewer>
+                    </StackPanel>
+
+                    <!-- Close Button -->
+                    <Button x:Name="Close" Content="{Binding [close], Source={StaticResource Loc}}"
+                            HorizontalAlignment="Right"
+                            Width="100"
+                            Height="40"
+                            FontSize="18"
+                            Style="{DynamicResource DarkerButtonStyle}"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Viewbox>
+</UserControl>
