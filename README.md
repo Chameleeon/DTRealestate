@@ -35,13 +35,13 @@ Logging in opens the default dashboard view, which can also be accessed by click
 This page allows agents to view existing realestates in the database, edit them and add new ones. Only administrators can delete realestates from the database. These realestates can be searched, filtered and sorted by different criteria.
 ![realestates](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/realestates.png)
 
-Clicking the **Edit** button in he top right of the realestate card opens the editing popup for the given realestate, allowing the agent to modify any of the existing values.
+Clicking the **Edit** button in he top right of the realestate card opens the editing popup for the given realestate, allowing the agent to modify any of the existing values.</br>
 ![edit](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/edit_realestate.png)
 
 Clicking the **Info** button in the bottom right allows the agent to view detailed info about the given realestate.
 ![edit](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/realestate_info.png)
 
-Clicking the **Add** button next to the info button allows the agent to add a new offer for the given realestate. Each realestate can have multiple offers.
+Clicking the **Add** button next to the info button allows the agent to add a new offer for the given realestate. Each realestate can have multiple offers.</br>
 ![add_offer](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/add_offer.png)
 
 The button **Add Realestate** allows the agent to add a new realestate by opening a new popup window.
