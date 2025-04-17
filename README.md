@@ -5,21 +5,51 @@ This application is a simple, intuitive application mainly tailored towards real
 ***
 # Available functionalities
 
+Below are listed all of the available functionalities of the application, divided into three categories:
+- General
+- Administrator
+- Agent
+General functionalities represent functionalities which are not specific to any user, while the administrator and agent functionalities represent functionalities for that specific type of user.
+
+## General functionalitites
+
 ### Registration
 
 Agents can create a new account. This account must be activated by an administrator before the agent can use the application. The registraction screen is shown on the image below.
 ![signup](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/signup.png)
-
-### Agent activation
-
-As mentioned above, agents cannot log in to their account until it has been activated. The administrator view for activating and deactivating agent accounts is shown below.
-![activate](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/admin_agents.png)
 
 ### Log in
 
 After the agent account has been activated, the agent can loog in. The log in screen is a standard, simple log in screen taking in a username and a password, checking the password hash to the one stored in the database and if they match, the agent is logged in and can perform various actions.
 
 ![login](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/login.png)
+
+### Settings
+
+Clicking on the **Settings** button in the top right corner of the window after the user is logged in will open the **Settings** page, allowing the user to select one of three currently available themes:
+- Dark
+- Light
+- Flame
+  
+The user can also select one of two currently supported languages:
+- English
+- Serbian
+
+These settings are saved and are loaded back after the application is closed and opened again, meaning that the user doesn't have to change them every time they open the application.
+
+![settings](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/settings.png)
+
+## Administrator functionalities
+
+### Administrator dashboard
+
+The administrator dashboard shows basic info about agents, such as number of activated and deactivated agent accounts.
+![admin_dashboard](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/admin_dashboard.png)
+
+### Agent activation
+
+As mentioned above, agents cannot log in to their account until it has been activated. The administrator view for activating and deactivating agent accounts is shown below.
+![activate](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/admin_agents.png)
 
 ## Agent functionalities
 
@@ -77,8 +107,12 @@ The Offers page allows agents to view existing offers and their details, edit th
 Clicking the **Edit** button in the top right opens up a pop up which allows the agent to change information of the existing offer.
 ![edit_offer](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/edit_offer.png)
 
-Clicking the **Info** btton inthe bottom right corner of the offer card opens a pop up window showing the detailed information of the selected offer.
+Clicking the **Info** btton inthe bottom right corner of the offer card opens a pop up window showing the detailed information of the selected offer.</br>
 ![info_offers](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/offer_details.png)
 
 Clicking the **Add** button next to the **Info** button opens a pop up window for adding a new contract for the selected offer.
 ![add_contract](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/create_contract.png)
+
+### Log Out
+
+Clicking the **Log Out** button in the bottom left corner of the navigation menu, the user is logged out and taken back to the **Log In** page.
