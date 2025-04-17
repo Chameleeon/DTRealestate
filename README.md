@@ -46,3 +46,39 @@ Clicking the **Add** button next to the info button allows the agent to add a ne
 
 The button **Add Realestate** allows the agent to add a new realestate by opening a new popup window.
 ![add_realestate](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/add_realestate.png)
+
+### Contracts
+
+This page allows agents to view completed contracts, search them, sort and filter them by different criteria.
+![contracts](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/contracts.png)
+
+Clicking the **Details** button on a contract allows the agent to view details of the contract.
+![contract_details](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/contract_details.png)
+
+Clicking the **Save as PDF** button on a contract allows the agent to select the location and the name of the document, and then converts the existing contract to a PDF file.
+
+### Inquiries
+
+The inquiries page allows agents to view client inquiries about existing offers. It allows the agents to delete or reply to these inquiries, as well as to see details of the offer for which the inquiry has been sent.
+![inquiries](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/inquiries.png)
+
+Clicking the **Info** button in the top right will take the agent to the **Offers** page and show the exact offer which the inquiry was sent for.
+
+Clicking the **Delete** button deletes the inquiry, asking for confirmation first.
+
+Clicking the **Reply** button next to the **Delete** button opens a pop up window in which the agent can send a response message to the client.
+![reply](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/reply.png)
+
+### Offers
+
+The Offers page allows agents to view existing offers and their details, edit them and add contracts for each offer. The agent can search and filter the offers.
+![offers](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/offers.png)
+
+Clicking the **Edit** button in the top right opens up a pop up which allows the agent to change information of the existing offer.
+![edit_offer](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/edit_offer.png)
+
+Clicking the **Info** btton inthe bottom right corner of the offer card opens a pop up window showing the detailed information of the selected offer.
+![info_offers](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/offer_details.png)
+
+Clicking the **Add** button next to the **Info** button opens a pop up window for adding a new contract for the selected offer.
+![add_contract](https://github.com/Chameleeon/DTRealestate/blob/main/Screenshots/create_contract.png)
